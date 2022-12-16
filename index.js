@@ -63,7 +63,7 @@ let searchTimeoutToken=0;
             }
             searchTimeoutToken=setTimeout(()=>{
                 searchRecipes(searchFieldElement.value);
-            },300);
+            },500);
             
         }
 
