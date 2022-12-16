@@ -12,7 +12,7 @@ This is a recipe website where one can search up ingredients of a particular foo
     - Open index.html file with your default browser).
     - And the you are good to go.
 
-    #### Requirement
+#### Requirement
     Node.js- 
     JSON
 ## BDD
@@ -27,7 +27,7 @@ This is a recipe website where one can search up ingredients of a particular foo
     - HTML and CSS
     - JS
     -JSON
-  ## Support/Contact Details
+## Support/Contact Details
     - bryanclyv@gmail.com
     
 
