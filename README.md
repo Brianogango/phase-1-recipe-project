@@ -27,4 +27,9 @@ This is a recipe website where one can search up ingredients of a particular foo
     - HTML and CSS
     - JS
     -JSON
-  
+  ## Support/Contact Details
+    - bryanclyv@gmail.com
+    
+
+## License
+Licenced under the [MT-licence](https://github.com/Brianogango/phase-1-recipe-project/blob/main/licence.md)Copyright (c) 2022 **Brian Ogango
