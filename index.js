@@ -39,16 +39,14 @@ function recipes(recipes) {
             </div>
         </div>
   
-    `
-    
-document.addEventListener('DOMContentLoaded', function(event) {
-var cards = document.querySelectorAll('#card');
-cards.forEach((card)=>{
-  card.addEventListener( 'click', function() {
-    card.classList.toggle('is-flipped');
-  });
-});
-});
+    `;
+ const card =document.getElementById("card")
+    card.addEventListener("click", flipCard);
+    function flipCard(){
+    card.classList.toggle("flipCard");
+}
+
+
 }
 
 //search button on keyup
