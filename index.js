@@ -35,17 +35,20 @@ function recipes(recipes) {
                 <h3>Ingredients</h3>
                 <p>${food.ingredientLines}</p>
                 </div>
+
             </div>
         </div>
   
-    `;
-   const card =document.getElementById("card")
-    card.addEventListener("click", flipCard);
-    function flipCard(){
-    card.classList.toggle("flipCard");
-}
-
-
+    `
+    
+document.addEventListener('DOMContentLoaded', function(event) {
+var cards = document.querySelectorAll('#card');
+cards.forEach((card)=>{
+  card.addEventListener( 'click', function() {
+    card.classList.toggle('is-flipped');
+  });
+});
+});
 }
 
 //search button on keyup
@@ -78,13 +81,14 @@ const btn = document.getElementById('btn');
             message: myMessage
         };
         console.log(myFeedback);
-        const feedbackList = document.getElementById('feedback-list');
-        const myFeedbackCard = document.createElement('li');
+        const feedbackList = document.getElementById('feedback');
+        const myFeedbackCard = document.createElement('ol');
 
         myFeedbackCard.innerHTML = `
         <p>${myFeedback.name}</p>
         <p>${myFeedback.email}</p>
         <p>${myFeedback.message}</p>
+
         `;
         feedbackList.appendChild(myFeedbackCard);
         
