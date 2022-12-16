@@ -82,3 +82,29 @@ body{
     width: 100%;
     flex-wrap: wrap;
 }
+.display_section .item{
+    width: 30%;
+    flex: 0 0 30%;
+    height: 300px;
+    margin: 15px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    position: relative;
+    box-shadow: 0 0 20px rgba(219, 240, 34, 0.15);
+    text-align: center;
+    background-color: beige;
+    
+    
+}
+.main_content{
+    padding-left: 270px;
+    
+}
+.card{
+    position: relative;
+    width: 30%;
+    height: 350px;
+    transform-style:preserve-3d ;
+    transition: all 0.8s ease;
+    margin: 10px;
+}
