@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Clicker+Script&display=swap');
+
 :root
 {
    --bg-black-900:#f2f2fc;
@@ -35,36 +37,75 @@ body{
    border-right: 1px solid var(--bg-black-50);
    height: 100%;
    z-index: 10;
-   padding: 30px;
    justify-content: center;
    align-items: center;;
 }
 .aside_nav .aside_title{
+    padding-top: 20px;
+    padding-left: 30px;
     height: 100px;
     color: var(--skin-color);
-    text-align: center;
     text-transform: capitalize;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'Courier New', cursive;
+    font-style: italic;
+    background: #302e4d;
+
 }
-.aside_nav .aside_title .title h1{
-    font-weight: 800px;
+.aside_nav .nav{
+    margin-top: 20px;
+}
+.aside_nav .nav li{
+    margin-bottom: 20px;
+    display: block;
+    text-transform: capitalize;
+    padding-left: 20px;
+}
+.aside_nav .nav li a{
+    font-size: 16px;
+    font-weight: 600px;
+    display: block;
+    color: var(--text-black-900);
+    border-bottom: 1px solid var(--bg-black-50);
+    padding: 5px 15px;
+}
+.aside_nav .nav a:hover{
+    transform: scale(1.15);
+    color: var(--skin-color);
+}
+.aside_nav .nav .active{
+    color: var(--skin-color);
+}
+.aside_search{
+    background: var(--skin-color);
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+    margin-bottom: 10px;
+    height: 70px;
+    text-align: center;
 }
 .search{
     border: 1 px solid var(--skin-color);
     outline: 0;
-    padding: 0 1rem;
+    
     font-family: inherit;
     border-radius: 2rem;
     font-size: 1.1rem;
-    width: 100%;
+    width: 90%;
     padding: 10px;
     background: #302e4d;
     color: var(--skin-color);
     text-align: center;
+    margin-bottom: 5px;
+    margin-top: 15px;
+    margin-left: 5px;
+    margin-right: 5px;
 }
 .search::placeholder{
     padding: 10px;
     color: var(--skin-color);
+    text-transform: uppercase;
+    font-size: 14px;
 }
 .error{
     width: 100%;
@@ -93,8 +134,11 @@ body{
     box-shadow: 0 0 20px rgba(219, 240, 34, 0.15);
     text-align: center;
     background-color: beige;
-    
-    
+}
+.recipe_btn{
+padding:5px;
+align-self: baseline;
+height: 10px;
 }
 .main_content{
     padding-left: 270px;
@@ -114,7 +158,7 @@ body{
     color: #000;
     width: 100%;
     height: 100%;
-    backface-visibility: hidden;
+    backface-visibility:hidden;
     text-align: center;
     border-radius: 10px;
      box-shadow: 0 0 20px rgba(219, 240, 34, 0.15);
