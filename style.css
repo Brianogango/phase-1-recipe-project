@@ -49,3 +49,20 @@ body{
 .aside_nav .aside_title .title h1{
     font-weight: 800px;
 }
+.search{
+    border: 1 px solid var(--skin-color);
+    outline: 0;
+    padding: 0 1rem;
+    font-family: inherit;
+    border-radius: 2rem;
+    font-size: 1.1rem;
+    width: 100%;
+    padding: 10px;
+    background: #302e4d;
+    color: var(--skin-color);
+    text-align: center;
+}
+.search::placeholder{
+    padding: 10px;
+    color: var(--skin-color);
+}
