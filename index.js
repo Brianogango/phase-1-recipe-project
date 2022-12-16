@@ -44,3 +44,21 @@ function recipes(recipes) {
 }
 
 }
+
+//search button on keyup
+let searchTimeoutToken=0;
+ window.onload=()=>{
+        const searchFieldElement=document.getElementById('search');
+        searchFieldElement.onkeyup=(event)=>{
+            clearTimeout(searchTimeoutToken);
+            event.preventDefault();
+            if(searchFieldElement.value.length === 0){
+                return;
+            }
+            searchTimeoutToken=setTimeout(()=>{
+                searchRecipes(searchFieldElement.value);
+            },300);
+            
+        }
+
+}
