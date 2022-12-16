@@ -218,3 +218,39 @@ height: 10px;
 .flipCard{
     transform: rotateY(180deg);
 }
+/*------contact section-----*/
+#contact_section{
+    min-height: 100vh;
+    display: flex;
+    padding: 0 30px;
+    opacity: 1;
+    width: 100%;
+    flex-wrap: wrap;
+    padding-left: 270px;
+}
+#contact_section .contact{
+   padding: 15px;
+}
+#submit-form{
+    width: 100%;
+}
+#myName{
+    width: 100%;
+    height: 40px;
+    margin-bottom: 15px;
+}
+#myEmail{
+     width: 100%;
+    height: 40px;
+    margin-bottom: 15px;
+}
+#message{
+    height: 150px;
+    width: 100%;
+    margin-bottom: 15px;
+}
+#btn{
+    width: 100%;
+    height: 40px;
+    background: var(--skin-color);
+}

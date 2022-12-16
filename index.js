@@ -14,34 +14,37 @@ function searchRecipes(query) {
  //----Rendering each recipe on the web
 function recipes(recipes) {
     console.log(recipes)
+    let i = 0; i < recipes.hits.length; i++;
+        const food = recipes.hits[i].recipe;
     document.querySelector('#display_section').innerHTML+=`
 
     <div class="card" id="card">
             <div class="front">
                 <div class="image">
-                <img src="${recipes.hits[0].recipe.image}" alt="try">
+                <img src="${food.image}" alt="try">
                 </div>
-                <div class="name"><h2>${recipes.hits[0].recipe.label}</h2> </div>
+                <div class="name"><h2>${food.label}</h2> </div>
                 <div class="recipe_btn" id="open" ><a href = "#" class = "submit">Get Recipe</a></div>
             </div>
             <div class="back">
-                <h2>${recipes.hits[0].recipe.label}</h2>
+                <h2>${food.label}</h2>
                 <div class="back_image">
-                <img src="${recipes.hits[0].recipe.image}" alt="">
+                <img src="${food.image}" alt="">
                 </div>
                 <div class="ingredients">
                 <h3>Ingredients</h3>
-                <p>${recipes.hits[0].recipe.ingredientLines}</p>
+                <p>${food.ingredientLines}</p>
                 </div>
             </div>
         </div>
   
     `;
-    const card =document.getElementById("card")
-    card.addEventListener("click", flipCard());
+   const card =document.getElementById("card")
+    card.addEventListener("click", flipCard);
     function flipCard(){
     card.classList.toggle("flipCard");
 }
+
 
 }
 
@@ -62,3 +65,27 @@ let searchTimeoutToken=0;
         }
 
 }
+const btn = document.getElementById('btn');
+    btn.addEventListener('click', () => {
+
+        const myName = document.getElementById('myName').value;
+        const myEmail = document.getElementById('myEmail').value;
+        const myMessage = document.getElementById('message').value;
+        
+        const myFeedback = {
+            name: myName,
+            email: myEmail,
+            message: myMessage
+        };
+        console.log(myFeedback);
+        const feedbackList = document.getElementById('feedback-list');
+        const myFeedbackCard = document.createElement('li');
+
+        myFeedbackCard.innerHTML = `
+        <p>${myFeedback.name}</p>
+        <p>${myFeedback.email}</p>
+        <p>${myFeedback.message}</p>
+        `;
+        feedbackList.appendChild(myFeedbackCard);
+        
+});

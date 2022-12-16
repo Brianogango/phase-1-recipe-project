@@ -8,43 +8,55 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-   <div class="container">
-    <!-------Header navigation-->
-    <div class="aside_nav">
-        <div class="aside_title"><h1 class="title">my recipe</h1></div>
-        <!----Search pane-->
-        <div class="aside_search">
-            <input type="text" class="search" id="search" placeholder=" search recipe">
-        </div>
-        <ul class="nav">
-                <li><a href="#" class="active">home</a></li>
-                <li><a href="#">about</a></li>
-                
-            </ul>
-        <!-----Error display-->
-        <div class="error" id="error">
-        </div>
-    </div>
+    <div class="container">
+      <!-------Header navigation-->
+        <div class="aside_nav">
+            <div class="aside_title"><h1 class="title">my recipe</h1>
+            </div>
+            <!----Search pane-->
+            <div class="aside_search">
+                <input type="text" class="search" id="search" placeholder=" search recipe">
+            </div>
+                <ul class="nav">
+                  <li><a href="#display_section" class="active">home</a></li>
+                  <li><a href="#contact_section">contact</a></li> 
+                </ul>
+            </div>
+    </div> 
     
     <!--------recipe display section-->
 
     <div class="main_content">
-    <div class="row">
-    <section class="display_section" id="display_section">
-
-      <!----Displays the various recipe items-->
-                
-    </section>
-    </div>
-    <div class = "meal-details">
-
-        <!-- meal content -->
-
-        <div class = "meal-details-content" id="meal-details-content">
+        <div class="row">
+          <section class="display_section" id="display_section">
+            <!----Displays the various recipe items-->
+            <div class = "meal-details">
+              <!-- meal content -->
+                <div class = "meal-details-content" id="meal-details-content">
+                </div>
+            </div>
+                      
+          </section>
+        
         </div>
       </div>
-    </div>
-  </div>
+     <!-----contact section-->
+    <section id="contact_section">
+      <div class="contact">
+        <h1>Get in touch</h1>      
+            <div id="submit-form">    
+              <form name="submit"> 
+                <input id ="myName"type="text" name="Name" placeholder="Your Name" required>
+                <input id= "myEmail"type="email" name="Email" placeholder="Your Email" required>
+                <textarea id = "message"name="Message" rows="5" placeholder="Your Message"></textarea>
+              </form>
+            <input type="submit" value="Submit" id="btn"> 
+            </div>    
+              <div id="feedback-list">
+              </div>
+        </div>
+    </section>
+    
 
  </div>
  <script src="./index.js"></script>
