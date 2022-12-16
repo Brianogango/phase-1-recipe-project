@@ -15,3 +15,16 @@ This is a recipe website where one can search up ingredients of a particular foo
     #### Requirement
     Node.js- 
     JSON
+## BDD
+    As a user :
+    - I will be able to search my favourite dish.
+    - I will be able to see the ingredients of that particular dish.
+    
+## Bugs
+    There are no bugs in the project.
+
+## Technologies Used
+    - HTML and CSS
+    - JS
+    -JSON
+  
