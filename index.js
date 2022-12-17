@@ -13,12 +13,12 @@ function searchRecipes(query) {
  }
  //----Rendering each recipe on the web
 function recipes(recipes) {
-    console.log(recipes)
-    let i = 0; i < recipes.hits.length; i++;
+    const foodList = document.querySelector('#display_section');
+    for (let i = 0; i < recipes.hits.length; i++) {
         const food = recipes.hits[i].recipe;
-    document.querySelector('#display_section').innerHTML+=`
-
-    <div class="card" id="card">
+ 
+        foodList.innerHTML += `
+           <div class="card" id="card">
             <div class="front">
                 <div class="image">
                 <img src="${food.image}" alt="try">
@@ -38,16 +38,55 @@ function recipes(recipes) {
 
             </div>
         </div>
-  
-    `;
- const card =document.getElementById("card")
+        
+        `;
+//   add event listener to each food item
+        const card =document.getElementById("card")
     card.addEventListener("click", flipCard);
     function flipCard(){
     card.classList.toggle("flipCard");
 }
-
-
+        
+    }
 }
+
+
+// function recipes(recipes) {
+//     console.log(recipes)
+//     let i = 0; i < recipes.hits.length; i++;
+//         const food = recipes.hits[i].recipe;
+//     document.querySelector('#card').innerHTML=`
+
+    
+//             <div class="front">
+//                 <div class="image"m
+//                 <img src="${food.image}" alt="try">
+//                 </div>
+//                 <div class="name"><h2>${food.label}</h2> </div>
+//                 <div class="recipe_btn" id="open" ><a href = "#" class = "submit">Get Recipe</a></div>
+//             </div>
+//             <div class="back">
+//                 <h2>${food.label}</h2>
+//                 <div class="back_image">
+//                 <img src="${food.image}" alt="">
+//                 </div>
+//                 <div class="ingredients">
+//                 <h3>Ingredients</h3>
+//                 <p>${food.ingredientLines}</p>
+//                 </div>
+
+//             </div>
+        
+  
+//     `;
+//  const card =document.getElementById("card")
+//     card.addEventListener("click", flipCard);
+//     function flipCard(){
+//     card.classList.toggle("flipCard");
+// }
+
+
+// }
 
 //search button on keyup
 let searchTimeoutToken=0;
