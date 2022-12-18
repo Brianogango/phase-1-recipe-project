@@ -11,6 +11,11 @@ function searchRecipes(query) {
         recipes([]);
         });
  }
+ function clearInput(target){
+        if (target.value== ''){
+            target.value= "query";
+       }
+    }
  //----Rendering each recipe on the web
 function recipes(recipes) {
     const foodList = document.querySelector('#display_section');
@@ -41,13 +46,10 @@ function recipes(recipes) {
         
         `;
 //   add event listener to each food item
-        const card =document.getElementById("card")
-    card.addEventListener("click", flipCard);
-    function flipCard(){
-    card.classList.toggle("flipCard");
-}
-        
-    }
+var card = document.querySelector('.card');
+card.addEventListener( 'click', function() {
+  card.classList.toggle('flipCard');
+});}    
 }
 
 //search button on keyup
@@ -62,13 +64,16 @@ let searchTimeoutToken=0;
             }
             searchTimeoutToken=setTimeout(()=>{
                 searchRecipes(searchFieldElement.value);
-            },500);
+            },400);
             
         }
 
 }
+//handling the feedback form
 const btn = document.getElementById('btn');
-    btn.addEventListener('click', () => {
+
+    btn.addEventListener('click', (e) => {
+         e.preventDefault();
 
         const myName = document.getElementById('myName').value;
         const myEmail = document.getElementById('myEmail').value;
@@ -90,5 +95,13 @@ const btn = document.getElementById('btn');
 
         `;
         feedbackList.appendChild(myFeedbackCard);
-        
+        const inputs = document.querySelectorAll('#myName, #myEmail,#message');
+
+  inputs.forEach(input => {
+    input.value = '';
+  });
 });
+btn.addEventListener('click', myFunction);
+function myFunction() {
+  alert ("THANK YOU FOR YOUR FEEDBACK");
+}
