@@ -23,15 +23,15 @@ function recipes(recipes) {
         const food = recipes.hits[i].recipe;
  
         foodList.innerHTML += `
-           <div class="card" id="card">
-            <div class="front">
+         <div class="card">
+                <div class="front">
                 <div class="image">
                 <img src="${food.image}" alt="try">
                 </div>
                 <div class="name"><h2>${food.label}</h2> </div>
                 <div class="recipe_btn" id="open" ><a href = "#" class = "submit">Get Recipe</a></div>
-            </div>
-            <div class="back">
+                </div>
+                <div class="back">
                 <h2>${food.label}</h2>
                 <div class="back_image">
                 <img src="${food.image}" alt="">
@@ -40,16 +40,29 @@ function recipes(recipes) {
                 <h3>Ingredients</h3>
                 <p>${food.ingredientLines}</p>
                 </div>
-
+                   
+                </div>
             </div>
-        </div>
         
         `;
 //   add event listener to each food item
-var card = document.querySelector('.card');
-card.addEventListener( 'click', function() {
-  card.classList.toggle('flipCard');
-});}    
+        let btns=document.querySelectorAll('.card')
+let btns2=document.querySelectorAll('.flp')
+
+btns.forEach(item=>{
+    item.addEventListener('click', event => {
+        const cc=event.target.parentElement.parentElement;
+        cc.classList.toggle('flipped');
+    })
+});
+
+btns2.forEach(item => {
+    item.addEventListener('click', event => {
+        const cc=event.target.parentElement.parentElement;
+        cc.classList.toggle('flipped');
+    })
+});
+}    
 }
 
 //search button on keyup
